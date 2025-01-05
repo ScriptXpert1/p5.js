@@ -86,7 +86,8 @@ local function addHighlight(player)
     -- Highlight nesnesi oluştur
     local highlight = Instance.new("Highlight")
     highlight.Adornee = character
-    highlight.FillTransparency = 1 -- İç kısmı tamamen şeffaf
+    highlight.FillTransparency = 0.5 -- İç kısmı biraz şeffaf yapıyoruz
+    highlight.FillColor = Color3.fromRGB(255, 255, 255) -- Beyaz renk
     highlight.OutlineColor = Color3.new(0, 1, 1) -- Açık mavi/turkuaz renk
     highlight.OutlineTransparency = 0 -- Çizgiler tamamen görünür
     highlight.Parent = character
@@ -133,6 +134,7 @@ toggleESPButton.MouseButton1Click:Connect(function()
         game:GetService("RunService"):UnbindFromRenderStep("ESPUpdate")
     end
 end)
+
 
 -- FOV TextBox ve Butonu
 local fovLabel = Instance.new("TextLabel", mainFrame)
