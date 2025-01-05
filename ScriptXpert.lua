@@ -580,7 +580,7 @@ end)
 -- Key press (H) to toggle FOV
 game:GetService("UserInputService").InputBegan:Connect(function(input, isProcessed)
     if isProcessed then return end -- Eğer tuş başka bir işlem tarafından engellendiyse çık
-    if input.KeyCode == Enum.KeyCode.H then
+    if input.KeyCode == Enum.KeyCode.B then
         toggleFOV() -- H tuşu ile FOV açma/kapama
     end
 end)
